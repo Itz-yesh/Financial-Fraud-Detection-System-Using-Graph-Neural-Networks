@@ -1,0 +1,114 @@
+# Financial Fraud Detection GNN - Configuration File
+
+# Data Configuration
+data:
+  dataset_name: "paysim"  # Options: synthetic, ieee-cis, elliptic, paysim
+  raw_data_path: "data/raw"
+  processed_data_path: "data/processed"
+  train_ratio: 0.7
+  val_ratio: 0.15
+  test_ratio: 0.15
+  random_seed: 42
+
+# Graph Construction
+graph:
+  node_types:
+    - "user"
+    - "transaction"
+    - "merchant"
+  edge_types:
+    - "user_to_transaction"
+    - "transaction_to_merchant"
+    - "user_to_user"  # shared attributes
+  temporal_edges: true
+  time_window_hours: 24
+  max_neighbors: 100
+
+# Model Configuration
+model:
+  architecture: "jump_attention"  # Options: gcn, graphsage, gat, jump_attention, temporal_gnn
+  hidden_dim: 128
+  num_layers: 3
+  dropout: 0.3
+  
+  # GCN specific
+  gcn:
+    normalize: true
+    add_self_loops: true
+  
+  # GraphSAGE specific
+  graphsage:
+    aggregator: "mean"  # Options: mean, lstm, pool
+    
+  # GAT specific
+  gat:
+    num_heads: 4
+    concat_heads: true
+    
+  # Jump-Attention specific (Kadam et al. 2024)
+  jump_attention:
+    num_hops: 3
+    attention_type: "adaptive"  # adaptive attention weights
+    
+  # Temporal GNN specific (Saldaña-Ulloa et al. 2024)
+  temporal_gnn:
+    memory_dim: 100
+    time_encoding_dim: 32
+    num_temporal_layers: 2
+
+# Training Configuration
+training:
+  batch_size: 512
+  num_epochs: 100
+  learning_rate: 0.001
+  weight_decay: 0.0001
+  early_stopping_patience: 15
+  gradient_clip: 1.0
+  
+  # Class Imbalance Handling (Tong et al. 2023)
+  class_imbalance:
+    method: "weighted_loss"  # Options: weighted_loss, focal_loss, sampling
+    pos_weight: 10.0  # weight for positive (fraud) class
+    focal_loss_gamma: 2.0
+    sampling_strategy: "subgraph"  # for large graphs
+    
+  # Optimizer
+  optimizer: "adam"  # Options: adam, adamw, sgd
+  scheduler: "reduce_on_plateau"
+  scheduler_patience: 10
+  scheduler_factor: 0.5
+
+# Evaluation Configuration
+evaluation:
+  metrics:
+    - "roc_auc"
+    - "pr_auc"
+    - "f1_score"
+    - "precision"
+    - "recall"
+    - "accuracy"
+  threshold: 0.5  # classification threshold
+  save_predictions: true
+  save_confusion_matrix: true
+
+# Explainability Configuration
+explainability:
+  enable_attention_viz: true
+  enable_node_importance: true
+  num_examples_to_explain: 10
+  visualization_format: "png"  # Options: png, html, pdf
+
+# Experiment Configuration
+experiment:
+  name: "fraud_detection_gnn"
+  save_dir: "experiments"
+  checkpoint_dir: "experiments/checkpoints"
+  log_dir: "results/logs"
+  save_every_n_epochs: 5
+  tensorboard_logging: true
+
+# Hardware Configuration
+hardware:
+  device: "auto"  # Options: auto, cpu, cuda
+  num_workers: 4
+  pin_memory: true

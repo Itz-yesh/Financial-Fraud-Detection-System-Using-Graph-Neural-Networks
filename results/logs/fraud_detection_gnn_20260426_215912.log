@@ -1,0 +1,10 @@
+2026-04-26 21:59:12 - fraud_detection_gnn - INFO - TensorBoard logging to: results/logs\tensorboard\fraud_detection_gnn_20260426_215912
+2026-04-26 21:59:12 - fraud_detection_gnn - INFO - ======================================================================
+2026-04-26 21:59:12 - fraud_detection_gnn - INFO - FINANCIAL FRAUD DETECTION USING GRAPH NEURAL NETWORKS
+2026-04-26 21:59:12 - fraud_detection_gnn - INFO - ======================================================================
+2026-04-26 21:59:12 - fraud_detection_gnn - INFO - 
+[1/7] Loading dataset...
+2026-04-26 21:59:12 - fraud_detection_gnn - INFO - Dataset selected: paysim
+2026-04-26 21:59:40 - fraud_detection_gnn - INFO - Loaded 6362620 transactions
+2026-04-26 21:59:40 - fraud_detection_gnn - INFO - 
+[2/7] Preprocessing data...

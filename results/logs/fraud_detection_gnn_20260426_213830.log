@@ -1,0 +1,79 @@
+2026-04-26 21:38:30 - fraud_detection_gnn - INFO - TensorBoard logging to: results/logs\tensorboard\fraud_detection_gnn_20260426_213830
+2026-04-26 21:38:30 - fraud_detection_gnn - INFO - ======================================================================
+2026-04-26 21:38:30 - fraud_detection_gnn - INFO - FINANCIAL FRAUD DETECTION USING GRAPH NEURAL NETWORKS
+2026-04-26 21:38:30 - fraud_detection_gnn - INFO - ======================================================================
+2026-04-26 21:38:30 - fraud_detection_gnn - INFO - 
+[1/7] Loading dataset...
+2026-04-26 21:38:30 - fraud_detection_gnn - INFO - Loaded 10000 transactions
+2026-04-26 21:38:30 - fraud_detection_gnn - INFO - 
+[2/7] Preprocessing data...
+2026-04-26 21:38:31 - fraud_detection_gnn - INFO - 
+[3/7] Constructing transaction graph...
+2026-04-26 21:38:41 - fraud_detection_gnn - INFO - Graph: 10000 nodes, 649295 edges
+2026-04-26 21:38:41 - fraud_detection_gnn - INFO - 
+[4/7] Creating GNN model...
+2026-04-26 21:38:41 - fraud_detection_gnn - INFO - Model Architecture:
+2026-04-26 21:38:41 - fraud_detection_gnn - INFO - JumpAttentionGNN(in_channels=26, hidden_channels=128, num_hops=3, attention_type=adaptive, dropout=0.3)
+2026-04-26 21:38:41 - fraud_detection_gnn - INFO - Total parameters: 62,342
+2026-04-26 21:38:41 - fraud_detection_gnn - INFO - Trainable parameters: 62,342
+2026-04-26 21:38:41 - fraud_detection_gnn - INFO - 
+[5/7] Training model...
+2026-04-26 21:38:41 - fraud_detection_gnn - INFO - Starting training on device: cpu
+2026-04-26 21:38:41 - fraud_detection_gnn - INFO - Training for 100 epochs
+2026-04-26 21:38:43 - fraud_detection_gnn - INFO - Step 0 - train loss: 1.0012, accuracy: 0.8956
+2026-04-26 21:38:43 - fraud_detection_gnn - INFO - Step 0 - val loss: 1.0145, accuracy: 0.9453
+2026-04-26 21:38:44 - fraud_detection_gnn - INFO - Step 1 - train loss: 0.9781, accuracy: 0.9453
+2026-04-26 21:38:44 - fraud_detection_gnn - INFO - Step 1 - val loss: 1.0097, accuracy: 0.9453
+2026-04-26 21:38:45 - fraud_detection_gnn - INFO - Step 2 - train loss: 0.9763, accuracy: 0.9453
+2026-04-26 21:38:45 - fraud_detection_gnn - INFO - Step 2 - val loss: 1.0064, accuracy: 0.9453
+2026-04-26 21:38:46 - fraud_detection_gnn - INFO - Step 3 - train loss: 0.9820, accuracy: 0.9453
+2026-04-26 21:38:46 - fraud_detection_gnn - INFO - Step 3 - val loss: 1.0050, accuracy: 0.9453
+2026-04-26 21:38:47 - fraud_detection_gnn - INFO - Step 4 - train loss: 0.9796, accuracy: 0.9453
+2026-04-26 21:38:47 - fraud_detection_gnn - INFO - Step 4 - val loss: 1.0050, accuracy: 0.9453
+2026-04-26 21:38:49 - fraud_detection_gnn - INFO - Step 5 - train loss: 0.9726, accuracy: 0.9453
+2026-04-26 21:38:49 - fraud_detection_gnn - INFO - Step 5 - val loss: 1.0058, accuracy: 0.9453
+2026-04-26 21:38:50 - fraud_detection_gnn - INFO - Step 6 - train loss: 0.9681, accuracy: 0.9453
+2026-04-26 21:38:50 - fraud_detection_gnn - INFO - Step 6 - val loss: 1.0071, accuracy: 0.9453
+2026-04-26 21:38:51 - fraud_detection_gnn - INFO - Step 7 - train loss: 0.9674, accuracy: 0.9453
+2026-04-26 21:38:51 - fraud_detection_gnn - INFO - Step 7 - val loss: 1.0083, accuracy: 0.9453
+2026-04-26 21:38:52 - fraud_detection_gnn - INFO - Step 8 - train loss: 0.9646, accuracy: 0.9451
+2026-04-26 21:38:52 - fraud_detection_gnn - INFO - Step 8 - val loss: 1.0087, accuracy: 0.9453
+2026-04-26 21:38:53 - fraud_detection_gnn - INFO - Step 9 - train loss: 0.9634, accuracy: 0.9453
+2026-04-26 21:38:53 - fraud_detection_gnn - INFO - Step 9 - val loss: 1.0082, accuracy: 0.9453
+2026-04-26 21:38:54 - fraud_detection_gnn - INFO - Step 10 - train loss: 0.9642, accuracy: 0.9441
+2026-04-26 21:38:54 - fraud_detection_gnn - INFO - Step 10 - val loss: 1.0066, accuracy: 0.9453
+2026-04-26 21:38:55 - fraud_detection_gnn - INFO - Step 11 - train loss: 0.9614, accuracy: 0.9444
+2026-04-26 21:38:55 - fraud_detection_gnn - INFO - Step 11 - val loss: 1.0042, accuracy: 0.9453
+2026-04-26 21:38:56 - fraud_detection_gnn - INFO - Step 12 - train loss: 0.9593, accuracy: 0.9447
+2026-04-26 21:38:56 - fraud_detection_gnn - INFO - Step 12 - val loss: 1.0025, accuracy: 0.9453
+2026-04-26 21:38:57 - fraud_detection_gnn - INFO - Step 13 - train loss: 0.9574, accuracy: 0.9451
+2026-04-26 21:38:57 - fraud_detection_gnn - INFO - Step 13 - val loss: 1.0007, accuracy: 0.9453
+2026-04-26 21:38:58 - fraud_detection_gnn - INFO - Step 14 - train loss: 0.9563, accuracy: 0.9453
+2026-04-26 21:38:58 - fraud_detection_gnn - INFO - Step 14 - val loss: 0.9988, accuracy: 0.9453
+2026-04-26 21:39:00 - fraud_detection_gnn - INFO - Step 15 - train loss: 0.9545, accuracy: 0.9453
+2026-04-26 21:39:00 - fraud_detection_gnn - INFO - Step 15 - val loss: 0.9970, accuracy: 0.9453
+2026-04-26 21:39:00 - fraud_detection_gnn - INFO - Early stopping at epoch 15
+2026-04-26 21:39:00 - fraud_detection_gnn - INFO - Training completed in 18.20 seconds
+2026-04-26 21:39:00 - fraud_detection_gnn - INFO - Best validation accuracy: 0.9453
+2026-04-26 21:39:00 - fraud_detection_gnn - INFO - 
+[6/7] Evaluating model...
+2026-04-26 21:39:04 - fraud_detection_gnn - INFO - 
+Test Set Performance:
+2026-04-26 21:39:04 - fraud_detection_gnn - INFO -   ROC-AUC: 0.4932
+2026-04-26 21:39:04 - fraud_detection_gnn - INFO -   PR-AUC: 0.0614
+2026-04-26 21:39:04 - fraud_detection_gnn - INFO -   F1-Score: 0.0000
+2026-04-26 21:39:04 - fraud_detection_gnn - INFO -   Precision: 0.0000
+2026-04-26 21:39:04 - fraud_detection_gnn - INFO -   Recall: 0.0000
+2026-04-26 21:39:04 - fraud_detection_gnn - INFO - 
+[7/7] Generating explanations...
+2026-04-26 21:39:22 - fraud_detection_gnn - INFO - 
+Example Explanation (Node 10):
+2026-04-26 21:39:22 - fraud_detection_gnn - INFO -   Predicted: Normal (0.472)
+2026-04-26 21:39:22 - fraud_detection_gnn - INFO -   True Label: Fraud
+2026-04-26 21:39:22 - fraud_detection_gnn - INFO -   Top Features: [('feature_22', 0.0009501758613623679), ('feature_19', 0.0005879237432964146), ('feature_24', 0.0005080534610897303)]
+2026-04-26 21:39:30 - fraud_detection_gnn - INFO - 
+======================================================================
+2026-04-26 21:39:30 - fraud_detection_gnn - INFO - TRAINING COMPLETE!
+2026-04-26 21:39:30 - fraud_detection_gnn - INFO - ======================================================================
+2026-04-26 21:39:30 - fraud_detection_gnn - INFO - Results saved to: results/
+2026-04-26 21:39:30 - fraud_detection_gnn - INFO - Model checkpoints saved to: experiments/checkpoints

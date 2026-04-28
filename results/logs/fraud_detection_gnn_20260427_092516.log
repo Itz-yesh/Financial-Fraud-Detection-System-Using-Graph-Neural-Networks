@@ -1,0 +1,38 @@
+2026-04-27 09:25:16 - fraud_detection_gnn - INFO - TensorBoard logging to: results/logs\tensorboard\fraud_detection_gnn_20260427_092516
+2026-04-27 09:25:16 - fraud_detection_gnn - INFO - ======================================================================
+2026-04-27 09:25:16 - fraud_detection_gnn - INFO - FINANCIAL FRAUD DETECTION USING GRAPH NEURAL NETWORKS
+2026-04-27 09:25:16 - fraud_detection_gnn - INFO - ======================================================================
+2026-04-27 09:25:16 - fraud_detection_gnn - INFO - 
+[1/7] Loading dataset...
+2026-04-27 09:25:16 - fraud_detection_gnn - INFO - Dataset selected: paysim
+2026-04-27 09:25:35 - fraud_detection_gnn - INFO - Loaded 200000 transactions
+2026-04-27 09:25:35 - fraud_detection_gnn - INFO - 
+[2/7] Preprocessing data...
+2026-04-27 09:25:35 - fraud_detection_gnn - INFO - 
+[3/7] Constructing transaction graph...
+2026-04-27 09:26:25 - fraud_detection_gnn - INFO - Graph: 200000 nodes, 10048741 edges
+2026-04-27 09:26:25 - fraud_detection_gnn - INFO - 
+[4/7] Creating GNN model...
+2026-04-27 09:26:25 - fraud_detection_gnn - INFO - Model Architecture:
+2026-04-27 09:26:25 - fraud_detection_gnn - INFO - JumpAttentionGNN(in_channels=11, hidden_channels=128, num_hops=3, attention_type=adaptive, dropout=0.3)
+2026-04-27 09:26:25 - fraud_detection_gnn - INFO - Total parameters: 60,422
+2026-04-27 09:26:25 - fraud_detection_gnn - INFO - Trainable parameters: 60,422
+2026-04-27 09:26:25 - fraud_detection_gnn - INFO - 
+[5/7] Training model...
+2026-04-27 09:26:26 - fraud_detection_gnn - INFO - Starting training on device: cpu
+2026-04-27 09:26:26 - fraud_detection_gnn - INFO - Training for 1 epochs
+2026-04-27 09:42:43 - fraud_detection_gnn - INFO - Step 0 - train loss: 0.5772, accuracy: 0.9436
+2026-04-27 09:42:43 - fraud_detection_gnn - INFO - Step 0 - val loss: 0.5336, accuracy: 0.9476
+2026-04-27 09:42:43 - fraud_detection_gnn - INFO - Training completed in 977.24 seconds
+2026-04-27 09:42:43 - fraud_detection_gnn - INFO - Best validation accuracy: 0.9476
+2026-04-27 09:42:43 - fraud_detection_gnn - INFO - 
+[6/7] Evaluating model...
+2026-04-27 09:49:04 - fraud_detection_gnn - INFO - 
+Test Set Performance:
+2026-04-27 09:49:04 - fraud_detection_gnn - INFO -   ROC-AUC: 0.7986
+2026-04-27 09:49:04 - fraud_detection_gnn - INFO -   PR-AUC: 0.3523
+2026-04-27 09:49:04 - fraud_detection_gnn - INFO -   F1-Score: 0.1250
+2026-04-27 09:49:04 - fraud_detection_gnn - INFO -   Precision: 0.0676
+2026-04-27 09:49:04 - fraud_detection_gnn - INFO -   Recall: 0.8174
+2026-04-27 09:49:04 - fraud_detection_gnn - INFO - 
+[7/7] Generating explanations...
